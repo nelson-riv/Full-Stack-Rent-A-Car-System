@@ -1,7 +1,7 @@
 import { LocalStorageService } from './../../services/local-storage.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from "@angular/forms";
+import { UntypedFormGroup, Validators, UntypedFormBuilder } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -12,9 +12,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm:FormGroup;
+  loginForm:UntypedFormGroup;
 
-  constructor(private formBuilder:FormBuilder,
+  constructor(private formBuilder:UntypedFormBuilder,
               private authService:AuthService,
               private localStorage:LocalStorageService,
               private toastrService:ToastrService,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Car } from 'src/app/models/entities/car';
 import { CarService } from '../../services/car.service';
 import { Brand } from 'src/app/models/entities/brand';
@@ -18,13 +18,13 @@ export class CarAddComponent implements OnInit {
 
   brands:Brand[];
   colors:Color[];
-  carAddForm:FormGroup;
+  carAddForm:UntypedFormGroup;
 
   constructor(private carService:CarService,
               private brandService:BrandService,
               private colorService:ColorService,
               private toastrService:ToastrService,
-              private formBuilder:FormBuilder) { }
+              private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.createCarAddForm();

@@ -1,6 +1,6 @@
 import { Brand } from './../../models/entities/brand';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { BrandService } from 'src/app/services/brand.service';
 import { ActivatedRoute } from '@angular/router';
@@ -13,12 +13,12 @@ import { ActivatedRoute } from '@angular/router';
 export class BrandUpdateComponent implements OnInit {
 
   brand:Brand;
-  brandUpdateForm:FormGroup;
+  brandUpdateForm:UntypedFormGroup;
 
   constructor(private brandService:BrandService,
               private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
-              private formBuilder:FormBuilder) { }
+              private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {

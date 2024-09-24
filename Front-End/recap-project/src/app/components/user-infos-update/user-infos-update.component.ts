@@ -1,7 +1,7 @@
 import { LocalStorageService } from './../../services/local-storage.service';
 import { UserInfos } from '../../models/entities/user-infos';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/services/user.service';
 
@@ -13,11 +13,11 @@ import { UserService } from 'src/app/services/user.service';
 export class UserInfosUpdateComponent implements OnInit {
 
   user:UserInfos;
-  userInfosUpdateForm:FormGroup;
+  userInfosUpdateForm:UntypedFormGroup;
 
   constructor(private userService:UserService,
               private toastrService:ToastrService,
-              private formBuilder:FormBuilder,
+              private formBuilder:UntypedFormBuilder,
               private localStorage:LocalStorageService) { }
 
   ngOnInit(): void {

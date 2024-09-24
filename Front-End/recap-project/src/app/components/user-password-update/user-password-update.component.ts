@@ -3,7 +3,7 @@ import { UserService } from './../../services/user.service';
 import { LocalStorageService } from './../../services/local-storage.service';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { UserPasswordChangingModel } from 'src/app/models/entities/user-password-changing';
 
@@ -16,13 +16,13 @@ export class UserPasswordUpdateComponent implements OnInit {
 
   user:UserInfos;
   userPasswordChangingModel:UserPasswordChangingModel;
-  userPasswordUpdateForm:FormGroup;
+  userPasswordUpdateForm:UntypedFormGroup;
 
   constructor(private authService:AuthService,
               private userService:UserService,
               private toastrService:ToastrService,
               private localStorage:LocalStorageService,
-              private formBuilder:FormBuilder) { }
+              private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     let email = this.localStorage.get("email");
