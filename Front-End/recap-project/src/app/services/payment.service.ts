@@ -1,19 +1,17 @@
-import { Payment } from './../models/entities/payment';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Payment } from "./../models/entities/payment"
+import { Injectable } from "@angular/core"
+import { HttpClient } from "@angular/common/http"
+import { Observable } from "rxjs"
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class PaymentService {
+  apiUrl = "https://localhost:5001/api/payments"
 
-  apiUrl = "https://localhost:44397/api/payments";
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient:HttpClient) { }
-
-  addPayment(payment:Payment):Observable<Payment> {
+  addPayment(payment: Payment): Observable<Payment> {
     return this.httpClient.post<Payment>(this.apiUrl + "/add", payment)
   }
-
 }
