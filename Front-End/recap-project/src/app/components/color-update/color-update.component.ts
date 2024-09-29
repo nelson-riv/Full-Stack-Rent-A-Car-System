@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Color } from 'src/app/models/entities/color';
@@ -13,12 +13,12 @@ import { ColorService } from 'src/app/services/color.service';
 export class ColorUpdateComponent implements OnInit {
 
   color:Color;
-  colorUpdateForm:FormGroup;
+  colorUpdateForm:UntypedFormGroup;
 
   constructor(private colorService:ColorService,
               private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
-              private formBuilder:FormBuilder) { }
+              private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {

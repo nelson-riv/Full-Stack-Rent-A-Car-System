@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Brand } from 'src/app/models/entities/brand';
@@ -21,14 +21,14 @@ export class CarUpdateComponent implements OnInit {
   colors:Color[];
   brandName:any;
   colorName:any;
-  carUpdateForm:FormGroup;
+  carUpdateForm:UntypedFormGroup;
 
   constructor(private carService:CarService,
               private brandService:BrandService,
               private colorService:ColorService,
               private toastrService:ToastrService,
               private activatedRoute:ActivatedRoute,
-              private formBuilder:FormBuilder) { }
+              private formBuilder:UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
