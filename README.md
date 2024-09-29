@@ -4,11 +4,11 @@
 
 Hi everyone :wave: <br>
 Welcome to the Rent A Car System project developed as Full Stack. <br> <br>
-This project has been developed based on Multi-Layered Architecture. 
-SOLID software principles have been adopted in the project. 
-Front-End part is coded with Angular, Back-End part is coded with C#. 
-MSSQL Local Database is used for the database. 
-In addition, a Web API has been coded in service layer to communicate with the Front-End side of the project and other applications. 
+This project has been developed based on Multi-Layered Architecture.
+SOLID software principles have been adopted in the project.
+Front-End part is coded with Angular, Back-End part is coded with C#.
+MSSQL Local Database is used for the database.
+In addition, a Web API has been coded in service layer to communicate with the Front-End side of the project and other applications.
 I would like to tell you about the main features of the project.
 <br>
 
@@ -23,8 +23,8 @@ select "Add New Database" and create your database. (I have chosen "RentACarSyst
 
 ![alt text](https://i.hizliresim.com/9oNgBu.png)
 
-Then, right click on the created database and select the "New Query" option and execute the table creation commands <a href="https://github.com/melihkaratekin/Full-Stack-Rent-A-Car-System/blob/main/Back-End/CreateTableScript.sql">here</a>. 
-Thus, the tables required for the project will be created. 
+Then, right click on the created database and select the "New Query" option and execute the table creation commands <a href="https://github.com/melihkaratekin/Full-Stack-Rent-A-Car-System/blob/main/Back-End/CreateTableScript.sql">here</a>.
+Thus, the tables required for the project will be created.
 You can add data manually from the opened page by right clicking on the created tables and selecting "View Data".
 
 ![alt text](https://i.hizliresim.com/cB91j4.png)
@@ -59,21 +59,21 @@ what actions it should perform and which set of rules it should pass through are
 Requirements for Back-End
 </h3>
 
-| Package Name  | Version |
-| ------------- | ------------- |
-| Autofac | 6.1.0  |
-| Autofac.Extensions.DependencyInjection  | 7.1.0  |
-| Autofac.Extras.DynamicProxy  | 6.0.0  |
-| FluentValidation  | 9.5.1  |
-| Microsoft.AspNetCore.Authentication.JwtBearer  | 3.1.12  |
-| Microsoft.AspNetCore.Http  | 2.2.2 |
-| Microsoft.AspNetCore.Http.Abstractions  | 2.2.0  |
-| Microsoft.EntityFrameworkCore.SqlServer  | 3.1.12  |
-| Microsoft.Extensions.Configuration  | 5.0.0  |
-| Microsoft.IdentityModel.Tokens  | 6.8.0  |
-| NETStandard.Library  | 2.0.3  |
-| Newtonsoft.Json  | 12.0.3  |
-| System.IdentityModel.Tokens.Jwt | 6.8.0 |
+| Package Name                                  | Version |
+| --------------------------------------------- | ------- |
+| Autofac                                       | 6.1.0   |
+| Autofac.Extensions.DependencyInjection        | 7.1.0   |
+| Autofac.Extras.DynamicProxy                   | 6.0.0   |
+| FluentValidation                              | 9.5.1   |
+| Microsoft.AspNetCore.Authentication.JwtBearer | 3.1.12  |
+| Microsoft.AspNetCore.Http                     | 2.2.2   |
+| Microsoft.AspNetCore.Http.Abstractions        | 2.2.0   |
+| Microsoft.EntityFrameworkCore.SqlServer       | 3.1.12  |
+| Microsoft.Extensions.Configuration            | 5.0.0   |
+| Microsoft.IdentityModel.Tokens                | 6.8.0   |
+| NETStandard.Library                           | 2.0.3   |
+| Newtonsoft.Json                               | 12.0.3  |
+| System.IdentityModel.Tokens.Jwt               | 6.8.0   |
 
 <br>
 <h2>
@@ -85,14 +85,18 @@ On the Front-End side, more attention was paid to whether the process is working
 <br>
 
 ```
-WARNING! For Front-End side to work, you need to set WebAPI as "Set as Startup Project" on Back-End side 
+WARNING! For Front-End side to work, you need to set WebAPI as "Set as Startup Project" on Back-End side
 and start it with IIS Express. Then you have to follow the steps below.
 ```
+
 1- First, you need to install the Node modules used in the project. <br>
+
 ```
 npm install
 ```
+
 2- Finally, we will open a new terminal and run the project on localhost. <br>
+
 ```
 ng serve --open
 ```
@@ -112,22 +116,5 @@ ng serve --open
 
 <br>
 <h2>
-Contact
-</h2>
-Thank you for taking your time to read. You can contact me from my accounts below. <br>
-<br>
-
-<a href="https://www.github.com/melihkaratekin" target="_blank">
-
-![alt text](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-
-</a>
-<a href="https://www.linkedin.com/in/melihkaratekin" target="_blank">
-
-![alt text](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
-
-</a>
-
-
 
 <br>
